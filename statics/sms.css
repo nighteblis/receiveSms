@@ -1,0 +1,156 @@
+.flag
+{
+width:199px;
+height:149px;
+border: thin solid #cbd3dd;
+display: block;
+}
+
+
+div.flagContainer
+{
+
+margin:20px;
+
+
+}
+
+div.flagContainerInRegion
+{
+margin: 10px;
+float:left;
+}
+
+li{
+list-style-type: none;
+
+}
+
+div.liInRegion{
+
+    border: 1px solid #cbd3dc;
+    padding: 5px 50px;
+    border-radius: 2px;
+    margin: 8px;
+    float:left;
+}
+
+div.flagContainerInRegion span{
+
+
+    margin: 0 80px;
+}
+
+div.numbersInRegion{
+    
+
+float:left;
+
+width:50%;
+
+}
+
+
+.regionnumber
+{
+float:left;
+height:250px;
+border: 1px solid #cbd3dd;
+margin: 10px;
+border-radius: 4px;
+}
+
+.numberlist li{
+
+line-height:24px;
+list-style:none;
+
+}
+
+
+.numberlist li a{
+
+
+text-decoration: none;
+
+
+}
+
+body{
+
+    background-color: #f6f6f6;
+}
+
+div#body
+{
+
+margin:20px 200px;
+
+}
+
+
+div.flagContainer
+{
+
+margin:20px;
+
+}
+
+#bodybanner{
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    background-color: #599bb320;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+
+}
+
+#footerbanner{
+    padding: 20px;
+    text-align: center;
+   /* border-top: 1px solid #cbd3dc;*/
+    margin-top: 15px;
+    background-color: #599bb320;
+}
+
+.float-right{
+
+float:right;
+
+}
+
+
+
+
+iframe
+{
+border:none;
+height:100%;
+width:100%;
+
+}
+
+#apparea
+{
+
+background-color: #599bb320;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px 0 0 0;
+    border-radius: 5px;
+
+}
+
+.appbutton
+{
+
+display:inline-block;
+}
+
+body{
+
+}
