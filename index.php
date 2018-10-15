@@ -63,7 +63,7 @@ if ($mysqli->connect_errno) {
    
    // Insert a new row in the table for each person returned
    while($row = mysqli_fetch_array($qry_result)) {
-      $display_string .= "<li><a href=\"number.do?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\">$row[number]</a></li>";
+      $display_string .= "<li><a href=\"number.php?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\">$row[number]</a></li>";
    }
 
    if($qry_result->num_rows == 0){
@@ -131,7 +131,7 @@ if ($mysqli->connect_errno) {
 <?php  for($i = 0 ; $i < count($regions) ; $i ++) {?>
 
 <div class="regionnumber" >
-<div class="flagContainer" ><a title="<?php echo $regions[$i]['regionName']?>" href="region.do?icon=<?php echo $regions[$i]['icon']  ?>&c=<?php echo $regions[$i]['regionName'] ?>&region=<?php  echo $regions[$i]['regionId']  ?>" > <img class="flag" src="pics/<?php echo $regions[$i]['icon'] ?>"></img></a></div>
+<div class="flagContainer" ><a title="<?php echo $regions[$i]['regionName']?>" href="region.php?icon=<?php echo $regions[$i]['icon']  ?>&c=<?php echo $regions[$i]['regionName'] ?>&region=<?php  echo $regions[$i]['regionId']  ?>" > <img class="flag" src="pics/<?php echo $regions[$i]['icon'] ?>"></img></a></div>
 <?php  echo $numbers[$i] ?>
 </div>
 

@@ -40,7 +40,7 @@ $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
    // Insert a new row in the table for each person returned
    while($row = mysqli_fetch_array($qry_result)) {
-      $display_string .= "<div class=\"liInRegion\"><a href=\"number.do?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\">$row[number]</a></div>";
+      $display_string .= "<div class=\"liInRegion\"><a href=\"number.php?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\">$row[number]</a></div>";
    }
    //echo "Query: " . $query . "<br />";
 
