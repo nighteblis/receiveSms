@@ -1,9 +1,6 @@
 <?php
 
-   $dbhost = "localhost";
-   $dbuser = "root";
-   $dbpass = "root";
-   $dbname = "sms";
+require_once("configs.php");
 
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);

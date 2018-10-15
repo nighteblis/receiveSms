@@ -1,9 +1,6 @@
 <?php
 
-$dbhost = "127.0.0.1";
-$dbuser = "root";
-$dbpass = "root";
-$dbname = "sms";
+require_once("configs.php");
 
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
@@ -105,13 +102,13 @@ if ($mysqli->connect_errno) {
 <body>
 
 
-
-
-<div id = "body">
-
 <div id="bodybanner">
 全球免费收短信-免费手机短信注册-免费手机短信验证-免费收取短信验证码
 </div>
+
+<div id = "body">
+
+
 
 
 <div id="headerbanner">

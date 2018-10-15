@@ -28,11 +28,11 @@ list-style-type: none;
 
 div.liInRegion{
 
-    border: 1px solid #cbd3dc;
     padding: 5px 50px;
     border-radius: 2px;
     margin: 8px;
     float:left;
+    background-color:white;
 }
 
 div.flagContainerInRegion span{
@@ -45,8 +45,9 @@ div.numbersInRegion{
     
 
 float:left;
-
+min-height: 600px;
 width:50%;
+
 
 }
 
@@ -55,9 +56,10 @@ width:50%;
 {
 float:left;
 height:250px;
-border: 1px solid #cbd3dd;
+/*border: 1px solid #cbd3dd;*/
 margin: 10px;
 border-radius: 4px;
+background-color: #ffffff;
 }
 
 .numberlist li{
@@ -79,6 +81,10 @@ text-decoration: none;
 body{
 
     background-color: #f6f6f6;
+    margin: 0;
+    background-image: url(https://travellingboomer.com/wp-content/uploads/Beijing-arrow-tower.jpg);
+    background-attachment: fixed;
+    background-size:100%;
 }
 
 div#body
@@ -100,10 +106,11 @@ margin:20px;
 
     text-align: center;
     vertical-align: middle;
-    line-height: 90px;
-    background-color: #599bb320;
-    font-size: 1.5em;
+    line-height: 70px;
+    background-color: #599bb380;
+    font-size: 1.1em;
     margin-bottom: 20px;
+    color: white;
 
 }
 
@@ -112,7 +119,8 @@ margin:20px;
     text-align: center;
    /* border-top: 1px solid #cbd3dc;*/
     margin-top: 15px;
-    background-color: #599bb320;
+    background-color: #599bb380;
+    color: white;
 }
 
 .float-right{
