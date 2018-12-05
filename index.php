@@ -40,7 +40,7 @@ if ($mysqli->connect_errno) {
 
   for( $i = 0 ; $i < count($regions) ; $i++){
 
- //  echo $regions[$i];
+  // echo $regions[$i];
   // echo $regions[$i]['id'];
 
 
