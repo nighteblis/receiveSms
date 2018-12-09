@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `sms` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `sms`;
--- MySQL dump 10.13  Distrib 5.7.23, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: sms
+-- Host: localhost    Database: sms
 -- ------------------------------------------------------
--- Server version	5.7.23-0ubuntu0.16.04.1
+-- Server version	5.7.24-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -61,7 +59,7 @@ CREATE TABLE `sms` (
   `createTime` datetime DEFAULT NULL,
   `updateTime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +68,7 @@ CREATE TABLE `sms` (
 
 LOCK TABLES `sms` WRITE;
 /*!40000 ALTER TABLE `sms` DISABLE KEYS */;
-INSERT INTO `sms` VALUES (1,'\r\n+14704278471',1,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(2,'+46769436148',6,'https://www.receive-a-sms.com/Sweden',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(3,'+447418310219',4,'https://www.receive-a-sms.com/UK',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(4,'+526644589276',9,'https://www.receive-a-sms.com/Mexico',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(5,'+61488863482',10,'https://www.receive-a-sms.com/Australia',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(6,'\r\n+14704278471',6,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(7,'\r\n+14704278471',7,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(8,'\r\n+14704278471',8,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43');
+INSERT INTO `sms` VALUES (1,'+14704278471',1,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(2,'+46769436148',6,'https://www.receive-a-sms.com/Sweden',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(3,'+447418310219',4,'https://www.receive-a-sms.com/UK',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(4,'+526644589276',9,'https://www.receive-a-sms.com/Mexico',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(5,'+61488863482',10,'https://www.receive-a-sms.com/Australia',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(6,'+14704278471',6,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(7,'+14704278471',7,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(8,'+14704278471',8,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43');
 /*!40000 ALTER TABLE `sms` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-08 23:29:27
+-- Dump completed on 2018-12-09 23:01:23
