@@ -117,9 +117,9 @@ function addNumber(){
     $icon = mysqli_real_escape_string($mysqli,$icon);
     $url = mysqli_real_escape_string($mysqli,$url);
 
-    #$sql = "insert into sms (number,regionId,url) values ('$number',$regionId,'$url')";
+    $sql = "insert into sms (number,regionId,url) values ('+$number',$regionId,'$url')";
 
-    print($sql);
+    #print($sql);
     print(executeSql($mysqli,$sql,"insert"));
         
 }
