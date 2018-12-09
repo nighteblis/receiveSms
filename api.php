@@ -6,23 +6,27 @@ require_once("configs.php");
 
 
 try{
-$action=$_POST['action'];
-$password=$_POST['s'];
+    $action=$_POST['action'];
+    $password=$_POST['s'];
 }
 catch(Exception $e){
     die("error ocuured!");
 }
 
-$d = new DateTime('2018-01-13T00:00:00.000000Z');
+$d = new DateTime('2000-08-08T00:00:00.000000Z');
 $nowDate = new DateTime();
-print($nowDate);
 $nowDate->setTime(0,0,0);
+#print($nowDate->format('Y-m-d H:i:s'));
 
-$diff = ( $nowDate->getTimestamp) - ( $d->getTimestamp()) ;
+$diff =  $nowDate->getTimestamp() -  $d->getTimestamp()  ;
 
-print($diff);
+#print($password);
+#print($diff);
 
-
+if($password != $diff)
+{
+    die("error occured");
+}
 
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
@@ -39,6 +43,11 @@ switch($action){
     case "deleteNumber":
         deleteNumber();
         break;
+
+    case "listNumbers":
+        listNumbers();
+        break;
+
 
     case "addRegion":
         addRegion();
@@ -61,14 +70,47 @@ switch($action){
 
 
 
+function listNumbers(){
+
+    global $mysqli;
+
+    $pageNo=$_POST['pageNo'];
+    $pageSize=$_POST['pageSize'];
+    //print("listRegions");
+
+    if($pageNo == 1)
+   {
+    $start = 0;
+   }
+    else{
+    $start = ($pageNo-1) * $pageSize + 1;
+   }
+
+    if ( checkIsNullOrEmpry($pageNo,$pageSize)){
+        die("arguments can not be null or empty!");
+    }
+
+    $sql = "SELECT * FROM sms limit $start,$pageSize";
+
+    #print($sql);
+    print(executeSql($mysqli,$sql,"query"));
+    
+}
+
+
 function addNumber(){
 
     global $mysqli;
 
- //   print("addNumber");
+    //print("addNumber");
     $number=$_POST['number'];
     $url=$_POST['url'];
     $regionId=$_POST['regionId'];
+     
+    if ( checkIsNullOrEmpry($number,$url,$regionId)){
+        die("arguments can not be null or empty!");
+    }
+
 
     $regionId = mysqli_real_escape_string($mysqli,$regionId);
     $icon = mysqli_real_escape_string($mysqli,$icon);
@@ -85,8 +127,14 @@ function deleteNumber(){
 
     global $mysqli;
     $number=$_POST['number'];
-   // print("deleteNumber");
-    
+
+    if ( checkIsNullOrEmpry($number)){
+        die("arguments can not be null or empty!");
+    }
+
+    $number = mysqli_real_escape_string($mysqli,$number);
+    $sql = "delete from sms where number = '"+$number+"'";
+
     print(executeSql($mysqli,$sql,"delete"));
 }
 
@@ -123,6 +171,29 @@ function error(){
 }
 
 
+function checkIsNullOrEmpry(){
+
+    $numargs = func_num_args();
+
+    $arg_list = func_get_args();
+    for ($i = 0; $i < $numargs; $i++) {
+
+
+        $str =  $arg_list[$i];
+
+        if (  !isset($str) || trim($str) === '' ) {
+            return true;
+        }
+
+    }
+
+    return false;
+
+
+
+}
+
+
 function executeSql($mysqli,$sql, $action){
     
 
@@ -143,7 +214,7 @@ function executeSql($mysqli,$sql, $action){
     else {
 
 
-
+    #update or insert sqls
     $ret =   mysqli_query($mysqli,$sql) or die(mysqli_error());
     //$ret = json_encode($rows);
 
