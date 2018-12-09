@@ -127,14 +127,14 @@ function deleteNumber(){
 
 
     global $mysqli;
-    $number=$_POST['number'];
+    $numberId=$_POST['numberId'];
 
-    if ( checkIsNullOrEmpry($number)){
+    if ( checkIsNullOrEmpry($numberId)){
         die("arguments can not be null or empty!");
     }
 
-    $number = mysqli_real_escape_string($mysqli,$number);
-    $sql = "delete from sms where number = '"+$number+"'";
+    $numberId = mysqli_real_escape_string($mysqli,$numberId);
+    $sql = "delete from sms where id = '"+$numberId+"'";
 
     print(executeSql($mysqli,$sql,"delete"));
 }
