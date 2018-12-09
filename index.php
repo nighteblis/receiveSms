@@ -61,12 +61,10 @@ if ($mysqli->connect_errno) {
    // Insert a new row in the table for each person returned
    while($row = mysqli_fetch_array($qry_result)) {
       $display_string .= "<li><a href=\"number.php?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\">$row[number]</a></li>";
-   }
+      
+    }
 
-   if($qry_result->num_rows == 0){
-
-      $display_string .= "<li>更多收录中</li>";
-   }
+   $display_string .= "<li><a href=\"region.php?icon=".$regions[$i]['icon']."&c=".$regions[$i]['regionName']."&region=".(string)$regions[$i]['regionId']."\">更多...</a></li>";
 
 
    //echo "Query: " . $query . "<br />";
