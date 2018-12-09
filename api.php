@@ -201,7 +201,7 @@ function executeSql($mysqli,$sql, $action){
     if($action ==  "query")
     {
 
-    $ret =   mysqli_query($mysqli,$sql) or die(mysqli_error());
+    $ret =   mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
     $rows = array();
     while($r = mysqli_fetch_assoc($ret)) {
         $rows[] = $r;
@@ -216,7 +216,7 @@ function executeSql($mysqli,$sql, $action){
 
 
     #update or insert sqls
-    $ret =   mysqli_query($mysqli,$sql) or die(mysqli_error());
+    $ret =   mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
     //$ret = json_encode($rows);
 
     $mysqli->close();
