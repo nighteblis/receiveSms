@@ -58,7 +58,8 @@ CREATE TABLE `sms` (
   `down` int(11) DEFAULT '0',
   `createTime` datetime DEFAULT NULL,
   `updateTime` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `number_UNIQUE` (`number`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -68,7 +69,7 @@ CREATE TABLE `sms` (
 
 LOCK TABLES `sms` WRITE;
 /*!40000 ALTER TABLE `sms` DISABLE KEYS */;
-INSERT INTO `sms` VALUES (1,'+14704278471',1,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(2,'+46769436148',6,'https://www.receive-a-sms.com/Sweden',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(3,'+447418310219',4,'https://www.receive-a-sms.com/UK',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(4,'+526644589276',9,'https://www.receive-a-sms.com/Mexico',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(5,'+61488863482',10,'https://www.receive-a-sms.com/Australia',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(6,'+14704278471',6,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(7,'+14704278471',7,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(8,'+14704278471',8,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43');
+INSERT INTO `sms` VALUES (1,'+14704278471',1,'https://www.receive-a-sms.com/USA',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(2,'+46769436148',6,'https://www.receive-a-sms.com/Sweden',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(3,'+447418310219',4,'https://www.receive-a-sms.com/UK',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(4,'+526644589276',9,'https://www.receive-a-sms.com/Mexico',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43'),(5,'+61488863482',10,'https://www.receive-a-sms.com/Australia',0,0,'2018-06-27 20:34:40','2018-06-27 20:34:43');
 /*!40000 ALTER TABLE `sms` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-09 23:01:23
+-- Dump completed on 2018-12-09 23:17:47
