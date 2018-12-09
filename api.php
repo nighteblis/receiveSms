@@ -12,8 +12,9 @@ try{
 catch(Exception $e){
     die("error ocuured!");
 }
+date_default_timezone_set('Asia/Shanghai');
 
-$d = new DateTime('2000-08-08T00:00:00.000000Z');
+$d = new DateTime('2018-01-13T00:00:00.000000Z');
 $nowDate = new DateTime();
 $nowDate->setTime(0,0,0);
 #print($nowDate->format('Y-m-d H:i:s'));
