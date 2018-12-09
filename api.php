@@ -134,7 +134,7 @@ function deleteNumber(){
     }
 
     $numberId = mysqli_real_escape_string($mysqli,$numberId);
-    $sql = "delete from sms where id = '"+$numberId+"'";
+    $sql = "delete from sms where id = $numberId";
 
     print(executeSql($mysqli,$sql,"delete"));
 }
