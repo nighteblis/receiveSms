@@ -1,1 +1,1 @@
-<link rel="stylesheet" type="text/css" href="statics/sms.css">
+<link rel="stylesheet" type="text/css" href="statics/sms.css?2">
