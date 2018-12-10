@@ -60,7 +60,7 @@ if ($mysqli->connect_errno) {
    
    // Insert a new row in the table for each person returned
    while($row = mysqli_fetch_array($qry_result)) {
-      $display_string .= "<li><a href=\"number.php?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\"><img class="smsicon" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-12/512/SMS-Message-icon.png"/>$row[number]</a></li>";
+      $display_string .= "<li><a href=\"number.php?smsaddress=".base64_encode($row[url]."sms")."\" target=\"_blank\"><img class=\"smsicon\" src=\"http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-12/512/SMS-Message-icon.png\"/>$row[number]</a></li>";
       
     }
 
