@@ -134,7 +134,7 @@ if ($mysqli->connect_errno) {
 
 <div class="regionnumber" id="us">
 <div class="flagContainer" ><img class="flag" src="pics/more.jpg"></img></div>
-<ul><li>更多加入中...</li></ul>
+<ul><li><span class="moreblock">更多加入中...</span></li></ul>
 </div>
 
 

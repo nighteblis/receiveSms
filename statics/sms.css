@@ -74,8 +74,13 @@ list-style:none;
 
 
 text-decoration: none;
+text-decoration: none;
+color: #6a5f62;
 
+}
 
+li.moreblock{
+    color: #6a5f62;
 }
 
 body{
