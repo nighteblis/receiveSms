@@ -87,28 +87,14 @@ if ($mysqli->connect_errno) {
 
 
 <html>
-
-
-
 <head>
-
 <?php require_once("headerinclude.php"); ?>
-
 </head>
-
-
 <body>
-
-
 <div id="bodybanner">
 <img class="headericon" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-12/512/SMS-Message-icon.png"> 全球免费收短信-免费手机短信注册-免费手机短信验证-免费收取短信验证码
 </div>
-
 <div id = "body">
-
-
-
-
 <div id="headerbanner">
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
