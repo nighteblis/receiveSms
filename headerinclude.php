@@ -4,3 +4,4 @@
 <meta name="author" content="www.free-sms.cf" />
 <meta name="description" content="免费短信,免费收短信,短信注册,国际免费短信,免费收短信,国际短信,手机号免费注册" />
 <meta name="generator" content="http://www.free-sms.cf" />
+<link rel="stylesheet" type="text/css" href="statics/sms.css?5">
